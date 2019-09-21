@@ -1,0 +1,59 @@
+<%- include("include/header") %> <%- include("include/navbar") %>
+
+<div class="page-content" id="content">
+  <div class="row">
+    <div class="col p-0">
+      <h2 class="title">/contact</h2>
+      <form action="/contact" method="POST">
+        <!--Grid row-->
+        <div class="row">
+          <!--Grid column-->
+          <div class="col-md-6">
+            <div class="md-form mb-0">
+              <label for="name" class="">Your name</label>
+              <input type="text" name="name" class="form-control" />
+            </div>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-md-6">
+            <div class="md-form mb-0">
+              <label for="email" class="">Your email</label>
+              <input type="text" id="email" name="email" class="form-control" />
+            </div>
+          </div>
+          <!--Grid column-->
+        </div>
+        <!--Grid row-->
+
+        <!--Grid row-->
+        <div class="row">
+          <div class="col-md-12">
+            <div class="md-form mb-0">
+              <label for="subject" class="">Subject</label>
+              <input type="text" name="subject" class="form-control"/>
+            </div>
+          </div>
+        </div>
+        <!--Grid row-->
+
+        <!--Grid row-->
+        <div class="row">
+          <!--Grid column-->
+          <div class="col-md-12">
+            <div class="md-form">
+              <label for="message">Your message</label>
+              <textarea type="text" id="message" name="message" rows="4" class="form-control md-textarea"></textarea>
+            </div>
+          </div>
+        </div>
+        <!--Grid row-->
+
+        <button type="submit" class="btn btn-outline mt-2"> Send </button>
+      </form>
+    </div>
+  </div>
+
+  <%- include("include/footer") %>
+</div>
