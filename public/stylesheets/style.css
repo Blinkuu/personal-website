@@ -244,7 +244,7 @@ textarea[type="text"]:focus {
 .btn-outline.active {
   background: #393e46;
   color: #f7f7f7;
-  border-color: #393e46; 
+  border-color: #393e46;
 }
 
 .btn-outline-orange {
@@ -253,7 +253,7 @@ textarea[type="text"]:focus {
   border-color: #d65a31;
   letter-spacing: 0.05em;
   transform-origin: center;
-  transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .btn-outline-orange:hover,
@@ -278,7 +278,7 @@ textarea[type="text"]:focus {
 
 .card {
   background-color: #eeeeee !important;
-  border: none !important; 
+  border: none !important;
   border-radius: 0 !important;
 }
 
@@ -308,4 +308,71 @@ textarea[type="text"]:focus {
 
 .card-image:hover .overlay {
   opacity: 0.8;
+}
+
+.form-signin {
+  width: 100%;
+  max-width: 420px;
+  padding: 15px;
+  margin: auto;
+}
+
+.form-label-group {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.form-label-group > input,
+.form-label-group > textarea,
+.form-label-group > label {
+  height: 3.125rem;
+  padding: 0.75rem;
+}
+
+.form-label-group > label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  margin-bottom: 0; /* Override default `<label>` margin */
+  line-height: 1.5;
+  color: #495057;
+  pointer-events: none;
+  cursor: text; /* Match the input under the label */
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  transition: all 0.1s ease-in-out;
+}
+
+.form-label-group input::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.form-label-group input:-ms-input-placeholder {
+  color: transparent;
+}
+
+.form-label-group input::-ms-input-placeholder {
+  color: transparent;
+}
+
+.form-label-group input::-moz-placeholder {
+  color: transparent;
+}
+
+.form-label-group input::placeholde {
+  color: transparent;
+}
+
+.form-label-group input:not(:placeholder-shown) {
+  padding-top: 1.25rem;
+  padding-bottom: 0.25rem;
+}
+
+.form-label-group input:not(:placeholder-shown) ~ label {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  font-size: 12px;
+  color: #777;
 }

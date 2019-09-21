@@ -1,59 +1,45 @@
 <%- include("include/header") %> <%- include("include/navbar") %>
 
 <div class="page-content" id="content">
-  <div class="row">
-    <div class="col p-0">
-      <h2 class="title">/contact</h2>
-      <form action="/contact" method="POST">
-        <!--Grid row-->
-        <div class="row">
-          <!--Grid column-->
-          <div class="col-md-6">
-            <div class="md-form mb-0">
-              <label for="name" class="">Your name</label>
-              <input type="text" name="name" class="form-control" />
-            </div>
-          </div>
-          <!--Grid column-->
-
-          <!--Grid column-->
-          <div class="col-md-6">
-            <div class="md-form mb-0">
-              <label for="email" class="">Your email</label>
-              <input type="text" id="email" name="email" class="form-control" />
-            </div>
-          </div>
-          <!--Grid column-->
+  <h2 class="title">/contact</h2>
+  <form class="form-contact" action="/contact" method="POST" autocomplete="off">
+    <div class="row">
+      <div class="col-6">
+        <div class="form-label-group">
+          <input type="text" id="inputName" class="form-control" placeholder="Name" required autofocus/>
+          <label for="inputName" class="">Your name</label>
         </div>
-        <!--Grid row-->
-
-        <!--Grid row-->
-        <div class="row">
-          <div class="col-md-12">
-            <div class="md-form mb-0">
-              <label for="subject" class="">Subject</label>
-              <input type="text" name="subject" class="form-control"/>
-            </div>
-          </div>
+      </div>
+      <div class="col-6">
+        <div class="form-label-group">
+          <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus/>
+          <label for="inputEmail">Email address</label>
         </div>
-        <!--Grid row-->
-
-        <!--Grid row-->
-        <div class="row">
-          <!--Grid column-->
-          <div class="col-md-12">
-            <div class="md-form">
-              <label for="message">Your message</label>
-              <textarea type="text" id="message" name="message" rows="4" class="form-control md-textarea"></textarea>
-            </div>
-          </div>
-        </div>
-        <!--Grid row-->
-
-        <button type="submit" class="btn btn-outline mt-2"> Send </button>
-      </form>
+      </div>
     </div>
-  </div>
 
-  <%- include("include/footer") %>
+    <div class="row">
+        <div class="col-12">
+            <div class="form-label-group">
+              <input type="text" id="inputSubject" class="form-control" placeholder="Subject" required autofocus/>
+              <label for="inputSubject">Subject</label>
+            </div>
+          </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <div class="form-label-group">
+                <input type="text" id="inputMessage" class="form-control" placeholder="Message" required autofocus/>
+              <label for="inputMessage">Message</label>
+            </div>
+          </div>
+    </div>
+
+    <div class="g-recaptcha" data-sitekey="6LeDrrkUAAAAAOe9Lk_LKHwzsQF0XB-B7SCj6uSy"></div>
+
+    <button type="submit" class="btn btn-outline mt-2">Send</button>
+  </form>
 </div>
+
+<%- include("include/footer") %>
