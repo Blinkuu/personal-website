@@ -1,0 +1,54 @@
+/* ******** */
+/* Projects */
+/* ******** */
+
+.card {
+  background-color: #eeeeee !important;
+  border: none !important;
+  border-radius: 0 !important;
+}
+
+.project-link {
+  color: #d65a31;
+}
+
+.project-link:hover {
+  color: #d65a31;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  background-color: #393e46;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  text-align: center;
+}
+
+.card-image:hover .overlay {
+  opacity: 0.8;
+}
+
+.btn-outline-orange {
+  color: #f7f7f7;
+  background-color: #393e46;
+  border-color: #d65a31;
+  letter-spacing: 0.05em;
+  transform-origin: center;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-outline-orange:hover,
+.btn-outline-orange:active,
+.btn-outline-orange:focus,
+.btn-outline-orange.active {
+  color: #f7f7f7;
+  transform: scale(1.1);
+}

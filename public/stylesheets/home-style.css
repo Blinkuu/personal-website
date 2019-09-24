@@ -1,0 +1,33 @@
+/* ******* */
+/* Content */
+/* ******* */
+
+.page-content {
+  font-size: 1.25rem;
+  font-weight: lighter;
+  padding: 5rem 25% 6rem 6rem;
+  width: calc(100% - 20rem);
+  margin-left: 20rem;
+  opacity: 1;
+  transition: all 0.4s;
+}
+
+a.read-more {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  font-weight: bold;
+  color: #d65a31;
+  text-decoration: none;
+  transition: all 0.1s;
+}
+
+a[class="read-more"]:hover {
+  color: #393e46;
+}
+
+.date {
+  font-size: 0.75rem;
+  font-weight: lighter;
+  margin-bottom: 0;
+  color: #393e46;
+}
