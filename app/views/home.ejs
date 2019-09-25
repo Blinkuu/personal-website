@@ -1,0 +1,16 @@
+<%- include("include/header") %> <%- include("include/navbar") %>
+
+<div class="page-content" id="content">
+  <h2 class="title">/</h2>
+  <div class="row">
+    <% posts.forEach((post) => { %>
+    <div class="col-lg-6 col-md-12 p-3">
+      <p class="date"><%= post.date %> by <%=post.author %></p>
+      <h3 class="title"><%= post.title %></h3>
+      <p class="text-justify"><%= post.content.substring(0, 250) %>&hellip;</p>
+      <h5><a class="read-more" href="/"> Read more </a></h5>
+    </div>
+    <% }) %>
+  </div>
+  <%- include("include/footer") %>
+</div>

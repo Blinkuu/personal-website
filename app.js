@@ -5,16 +5,15 @@ const path = require("path");
 const cookieParser = require("cookie-parser");
 const logger = require("morgan");
 
-const homeRouter = require("./routes/home");
-const blogRouter = require("./routes/blog.js");
-const projectsRouter = require("./routes/projects.js");
-const aboutRouter = require("./routes/about.js");
-const contactRouter = require("./routes/contact.js");
+const homeRouter = require("./app/routes/home");
+const projectsRouter = require("./app/routes/projects");
+const aboutRouter = require("./app/routes/about");
+const contactRouter = require("./app/routes/contact");
 
 const app = express();
 
 // view engine setup
-app.set("views", path.join(__dirname, "views"));
+app.set("views", path.join(__dirname, "app/views"));
 app.set("view engine", "ejs");
 
 app.use(logger("dev"));
@@ -26,7 +25,6 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use("/", homeRouter);
 app.use("/projects", projectsRouter);
 app.use("/about", aboutRouter);
-app.use("/blog", blogRouter);
 app.use("/contact", contactRouter);
 
 // catch 404 and forward to error handler

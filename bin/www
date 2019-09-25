@@ -7,6 +7,13 @@
 const app = require("../app");
 const debug = require("debug")("personal-website:server");
 const http = require("http");
+const mongoose = require("../config/mongoose");
+
+/**
+ * Connect to database
+ */
+
+mongoose.connect();
 
 /**
  * Get port from environment and store in Express.
