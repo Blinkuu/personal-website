@@ -52,3 +52,9 @@
   color: #f7f7f7;
   transform: scale(1.1);
 }
+
+img {
+  height: 10%;
+  width: 10%;
+  margin: 1rem;
+}
