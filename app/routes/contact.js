@@ -3,7 +3,7 @@ const router = express.Router();
 const nodemailer = require("nodemailer");
 const request = require("request");
 
-/* GET home page. */
+/* GET contact page. */
 router.get("/", (req, res) => {
   res.render("contact");
 });

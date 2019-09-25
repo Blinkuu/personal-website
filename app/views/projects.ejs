@@ -13,23 +13,27 @@
       <div class="card mb-3">
         <a class="project-link" href="<%= project.link %>" target="_blank">
           <div class="card-image text-center">
-            <img src="<%= project.img %>">
-            
-            <div class="overlay d-flex justify-content-center align-items-center">
-              <button type="button" class="text btn btn-outline-orange"> See project </button>
+            <img src="<%= project.img %>" />
+
+            <div
+              class="overlay d-flex justify-content-center align-items-center"
+            >
+              <button type="button" class="text btn btn-outline-orange">
+                See project
+              </button>
             </div>
           </div>
         </a>
         <div class="card-body">
-          <h5 class="card-title"> <%= project.title %> </h5>
+          <h5 class="card-title"><%= project.title %></h5>
           <p class="card-text text-justify">
-              <%= project.description_small %> 
+            <%= project.description_small %>
           </p>
         </div>
       </div>
     </div>
     <% }) %>
   </div>
-
-  <%- include("include/footer") %>
 </div>
+
+<%- include("include/footer") %>

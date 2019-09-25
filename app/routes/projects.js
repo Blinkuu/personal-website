@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const Project = require("../models/projects");
 
-/* GET home page. */
+/* GET projects page. */
 router.get("/", (req, res) => {
   Project.find({}).lean().exec((err, projects) => {
     if (!err) {
