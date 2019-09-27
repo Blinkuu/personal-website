@@ -16,7 +16,13 @@ p {
   margin-bottom: 0;
 }
 
+a {
+  color: #d65a31;
+  text-decoration: none;
+}
+
 a:hover {
+  color: #393e46;
   text-decoration: none;
 }
 

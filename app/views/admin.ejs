@@ -2,9 +2,47 @@
 
 <div class="page-content" id="content">
   <h2 class="title">/admin</h2>
-  <form action="/logout" method="GET">
-    <button type="submit" class="btn btn-outline mt-2">Logout</button>
-  </form>
+  <div class="row pt-3">
+    <div class="col-12">
+        <h4 class="title"> Compose an article: </h4>
+        <form class="form-publish" action="/" method="POST" autocomplete="off">
+          <div class="form-label-group">
+            <input type="text" id="inputAuthor" name="author" class="form-control" placeholder="Author" required autofocus/>
+            <label for="inputAuthor">Author</label>
+          </div>
+          <div class="form-label-group">
+            <input type="text" id="inputTitle" name="title" class="form-control" placeholder="Title" required autofocus/>
+            <label for="inputTitle">Title</label>
+          </div>
+          <div class="form-label-group">
+              <input type="text" id="inputContent" name="content" class="form-control" placeholder="Content" required autofocus/>
+              <label for="inputContent">Content</label>
+          </div>
+          <button type="submit" class="btn btn-outline mt-2"> Publish </button>
+        </form>
+    </div>
+  </div>
+  <div class="row pt-3">
+      <div class="col-12">
+          <h4 class="title"> Manage articles: </h4>
+          <ul>
+            <% posts.forEach((post) => { %>
+            <div class="d-flex">
+              <li class="mr-auto"> <%= post.title %> </li>
+              <button class="btn btn-outline fas fa-pencil-alt mx-2" type="submit"></button>
+              <button class="btn btn-outline fas fa-trash ml-2" onclick="deleteRequest('<%= post._id %>')"></button>
+            </div>
+            <% }) %>
+          </ul>
+      </div>
+    </div>
+  <div class="row">
+    <div class="col-12">
+        <form action="/logout" method="GET">
+          <button type="submit" class="btn btn-outline mt-2">Logout</button>
+        </form>
+    </div>
+  </div>
 </div>
 
 <%- include("include/footer") %>
