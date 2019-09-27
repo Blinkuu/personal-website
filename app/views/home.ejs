@@ -8,7 +8,7 @@
       <p class="date"><%= post.date %> by <%=post.author %></p>
       <h3 class="title"><%= post.title %></h3>
       <p class="text-justify"><%= post.content.substring(0, 250) %>&hellip;</p>
-      <h5><a class="read-more" href="/"> Read more </a></h5>
+      <h5><a class="read-more" href="/<%= post._id %>"> Read more </a></h5>
     </div>
     <% }) %>
   </div>

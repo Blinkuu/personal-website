@@ -18,6 +18,20 @@ router.get("/", (req, res) => {
   });
 });
 
+router.get("/:postId", (req, res) => {
+  Post.findOne({_id : req.params.postId}).lean().exec((err, post) => {
+    if (!err) {
+      post.date = new Date(post.date).toUTCString();
+      res.render("post", { post: post });
+    } else {
+      res.render("error", {
+        message: "Failed fetch post from database!",
+        error: err
+      });
+    }
+  });
+});
+
 router.get("/home", (req, res) => {
   res.redirect("/");
 });
