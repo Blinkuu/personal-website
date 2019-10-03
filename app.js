@@ -43,14 +43,14 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
-app.use("/", homeRouter);
+
 app.use("/projects", projectsRouter);
 app.use("/about", aboutRouter);
 app.use("/contact", contactRouter);
 app.use("/login", loginRouter);
 app.use("/logout", logoutRouter);
 app.use("/admin", adminRouter);
-
+app.use("/", homeRouter);
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
   next(createError(404));

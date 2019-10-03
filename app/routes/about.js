@@ -2,8 +2,8 @@ const express = require("express");
 const router = express.Router();
 const Information = require("../models/information");
 
-/* GET home page. */
 router.get("/", (req, res) => {
+  console.log("Chuj");
   Information.findOne({}, (err, information) => {
     if (!err) {
       res.render("about", {information: information});
