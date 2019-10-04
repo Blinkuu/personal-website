@@ -7,10 +7,10 @@
     <div class="col-lg-6 col-md-12 p-3">
       <p class="date"><%= post.date %> by <%=post.author %></p>
       <h3 class="title"><%= post.title %></h3>
-      <p class="text-justify"><%= post.content.substring(0, 250) %>&hellip;</p>
+      <p class="text-justify"><%= post.introduction %></p>
       <h5><a class="read-more" href="/<%= post._id %>"> Read more </a></h5>
     </div>
     <% }) %>
   </div>
-  <%- include("include/footer") %>
 </div>
+<%- include("include/footer") %>

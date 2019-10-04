@@ -13,7 +13,7 @@
 input[type="text"],
 input[type="email"],
 input[type="password"],
-textarea[type="text"] {
+textarea {
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   -ms-transition: all 0.3s ease-in-out;
@@ -26,9 +26,9 @@ textarea[type="text"] {
 input[type="text"]:focus,
 input[type="email"]:focus,
 input[type="password"]:focus,
-textarea[type="text"]:focus {
-  outline: none;
-  box-shadow: none;
+textarea:focus {
+  outline: none !important;
+  box-shadow: none !important;
 }
 
 .form-label-group {
@@ -37,9 +37,12 @@ textarea[type="text"]:focus {
 }
 
 .form-label-group > input,
-.form-label-group > textarea,
 .form-label-group > label {
   height: 3.125rem;
+  padding: 0.75rem;
+}
+
+.form-label-group > textarea {
   padding: 0.75rem;
 }
 
@@ -59,32 +62,39 @@ textarea[type="text"]:focus {
   transition: all 0.1s ease-in-out;
 }
 
-.form-label-group input::-webkit-input-placeholder {
+.form-label-group input::-webkit-input-placeholder,
+.form-label-group textarea::-webkit-input-placeholder {
   color: transparent;
 }
 
-.form-label-group input:-ms-input-placeholder {
+.form-label-group input:-ms-input-placeholder,
+.form-label-group textarea:-ms-input-placeholder {
   color: transparent;
 }
 
-.form-label-group input::-ms-input-placeholder {
+.form-label-group input::-ms-input-placeholder,
+.form-label-group textarea::-ms-input-placeholder {
   color: transparent;
 }
 
-.form-label-group input::-moz-placeholder {
+.form-label-group input::-moz-placeholder,
+.form-label-group textarea::-moz-placeholder {
   color: transparent;
 }
 
-.form-label-group input::placeholde {
+.form-label-group input::placeholder,
+.form-label-group textarea::placeholder {
   color: transparent;
 }
 
-.form-label-group input:not(:placeholder-shown) {
+.form-label-group input:not(:placeholder-shown),
+.form-label-group textarea:not(:placeholder-shown) {
   padding-top: 1.25rem;
   padding-bottom: 0.25rem;
 }
 
-.form-label-group input:not(:placeholder-shown) ~ label {
+.form-label-group input:not(:placeholder-shown) ~ label,
+.form-label-group textarea:not(:placeholder-shown) ~ label {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
   font-size: 12px;

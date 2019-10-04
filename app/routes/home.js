@@ -38,7 +38,7 @@ router.get("/home", (req, res) => {
 
 router.post("/", async (req, res) => {
   if (req.isAuthenticated()) {
-    const newPost = new Post({ author: req.body.author, date: Date.now(), title: req.body.title, content: req.body.content });
+    const newPost = new Post({ author: req.body.author, date: Date.now(), title: req.body.title, introduction: req.body.introduction, content: req.body.content });
     const result = await newPost.save();
     res.redirect("/admin");
   } else {

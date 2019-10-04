@@ -1,0 +1,27 @@
+.hljs {
+    background-color: #eeeeee;
+    padding: 0;
+}
+
+/* for block of numbers */
+.hljs-ln-numbers {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    text-align: center;
+    /* background-color: #393e46; */
+    color: #393e46;
+    border-right: 1px solid #CCC;
+    vertical-align: top;
+    padding: 1rem;
+    /* your custom style here */
+}
+
+.hljs-ln td {
+    padding: 0.2rem;
+    width: 2rem;
+}
