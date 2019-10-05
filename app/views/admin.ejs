@@ -15,7 +15,7 @@
             <label for="inputTitle">Title</label>
           </div>
           <div class="form-label-group">
-              <textarea rows="2" id="inputIntroduction" name="introduction" class="form-control" placeholder="Content" required autofocus></textarea>
+              <textarea rows="2" id="inputIntroduction" name="introduction" class="form-control" placeholder="Introduction" required autofocus></textarea>
               <label for="inputIntroduction">Introduction</label>
           </div>
           <div class="form-label-group">
@@ -33,8 +33,8 @@
             <% posts.forEach((post) => { %>
             <div class="d-flex">
               <li class="mr-auto"> <%= post.title %> </li>
-              <button class="btn btn-outline fas fa-pencil-alt mx-2" type="submit"></button>
-              <button class="btn btn-outline fas fa-trash ml-2" onclick="deleteRequest('<%= post._id %>')"></button>
+              <button class="btn btn-outline fas fa-pencil-alt mx-2" onclick="getRequest('/edit/<%= post._id %>')"></button>
+              <button class="btn btn-outline fas fa-trash ml-2" onclick="deleteRequest('/<%= post._id %>')"></button>
             </div>
             <% }) %>
           </ul>
